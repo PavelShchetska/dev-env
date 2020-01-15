@@ -1,0 +1,9 @@
+---
+ - name: dev-environment
+   hosts: all
+   become: yes
+   roles:
+     - { role: geerlingguy.java                                             }
+     - { role: geerlingguy.docker,  docker_users: "{{ vagrant_user_name }}" }
+     - { role: viasite-ansible.zsh, zsh_user:     "{{ vagrant_user_name }}" }
+     - { role: weareinteractive.vim                                         }
