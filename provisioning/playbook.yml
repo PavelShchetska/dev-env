@@ -1,5 +1,5 @@
 ---
- - name: dev-environment
+ - name: dev-env
    hosts: all
    become: yes
    roles:

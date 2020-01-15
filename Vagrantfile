@@ -11,7 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   #config.vm.box = "base"
-   config.vm.box = "centos/8"
+  #config.vm.box = "centos/8"
+  config.vm.box = "ubuntu/xenial64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,7 +65,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # end
   
    config.vm.provider "virtualbox" do |v|
-     v.name = "Docker_"
+     v.name = "dev-env"
      v.customize [
         "modifyvm", :id,
         "--groups", "/Vagrant",
