@@ -1,1 +1,3 @@
-# localhost
+# Development environment
+
+> vagrant up

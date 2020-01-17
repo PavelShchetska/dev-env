@@ -1,12 +1,9 @@
-name: CI
-
+name: Yaml Lint
 on: [push]
-
 jobs:
-  build:
-
+  lintAllTheThings:
     runs-on: ubuntu-latest
-
     steps:
-      - name: ansible-lint
-        uses: ansible/ansible-lint-action@v4.1.0.post0
+    - uses: actions/checkout@master
+    - name: yaml-lint
+      uses: ibiqlik/action-yamllint@master
